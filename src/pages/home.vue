@@ -1,8 +1,8 @@
 <template>
-  <p>Hello home!</p>
-  <p>Hello home2</p>
   <div class="card__wrapper" v-for="item in items" :key="item.id">
-    <Card :name="`${item.lvl} lvl`" :title="item.title" />
+    <Card :name="`${item.lvl} lvl`" :title="item.title" :imgUrl="item.img">
+      {{ item.descr }}
+    </Card>
   </div>
 </template>
 
@@ -19,12 +19,14 @@ export default {
           id: 1,
           title: 'archer',
           descr: 'archer archer archer archer',
+          img: require('../../assets/img/archer.png'),
           lvl: 4
         },
         {
           id: 2,
           title: 'Wizard',
           descr: 'Wizard Wizard Wizard Wizard',
+          img: require('../../assets/img/wizard.png'),
           lvl: 5
         }
       ]
