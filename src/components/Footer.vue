@@ -17,6 +17,8 @@ export default {
     return {
       links: links,
     }
+  },
+  props: {
   }
 }
 </script>

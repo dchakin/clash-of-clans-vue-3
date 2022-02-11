@@ -14,13 +14,20 @@
           :to="link"
       >See more</router-link>
     </div>
-    <slot name="footer"></slot>
+<!--    <slot name="footer"></slot>-->
+    <CardFooter
+      :itemprop="itemprop"
+    />
   </div>
 </template>
 
 <script>
+import CardFooter from '@/components/UI/CardFooter'
+
 export default {
   name: "Card",
+  components: { CardFooter },
+
   props: {
     name: {
       type: String,
@@ -35,6 +42,9 @@ export default {
     },
     link: {
       type: String,
+    },
+    itemprop: {
+      type: Object
     }
   }
 }
